@@ -1,4 +1,4 @@
-##D-Link DSL-3782 Code execution
+### D-Link DSL-3782 Code execution
 
 The buffer overflow vulnerability was found in the "/userfs/bin/tcapi" binary which is used as a wrapper for the "Diagnostics" functionality in the Web GUI.
 
