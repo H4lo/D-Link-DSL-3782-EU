@@ -1,10 +1,12 @@
-D-Link DSL-3782 Code execution
+#D-Link DSL-3782 Code execution
 
 The buffer overflow vulnerability was found in the "/userfs/bin/tcapi" binary which is used as a wrapper for the "Diagnostics" functionality in the Web GUI.
 
 An authenticated user can pass a long buffer as an 'read' parameter to the '/user/bin/tcapi' binary using 'read <node_name>' function and cause the memory corruption. Furthermore, it is possible to redirect the flow of the program and execute an arbitrary code.
 
 The vulnerability can be triggered as follows:
+<br>
+```
 $ sudo chroot . ./qemu userfs/bin/tcapi 
 set
 unset
@@ -15,7 +17,7 @@ save
 read
 readAll
 staticGet
-
+```
 $ sudo chroot . ./qemu userfs/bin/tcapi read
 read <node_name>
 
